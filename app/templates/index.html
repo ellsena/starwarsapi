@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Digite o nome do planeta </h1>
+<br>
+   <form action="busca" method="POST">
+      <div class="input-group mb-3">
+            <input type="text" name="nome" class="form-control" placeholder="Buscar planeta" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2" name="busca">Buscar</button>
+      </div>
+      <br>
+      <h3>{{ nome }}</h3>
+      <hr>
+      <div class="list-group">
+            {% if residentes == [] %}
+                  <h2>Residentes</h2>
+                  <a class="list-group-item list-group-item-action list-group-item-dark">Sem habitantes conhecidos</a>
+            {% else %}
+                  <h2>Residentes</h2>
+                  {% for residente in residentes %}
+                  <a class="list-group-item list-group-item-action list-group-item-dark">{{ residente }}</a>
+                  {% endfor %}
+            {% endif %}
+      </div>
+   </form>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunircon -b :$PORT starwarsapi:app
