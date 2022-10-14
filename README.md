@@ -33,4 +33,6 @@ pip install -r requirements.txt
 
 #### Inside the project root run:
 
-'flask run'
+```
+flask run
+```
